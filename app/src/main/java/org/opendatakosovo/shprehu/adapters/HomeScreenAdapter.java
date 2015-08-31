@@ -13,9 +13,6 @@ import java.util.List;
 
 import opendatakosovo.org.shprehu.R;
 
-/**
- * Created by pechorin on 8/31/15.
- */
 public final class HomeScreenAdapter extends BaseAdapter {
     private final List<Item> mItems = new ArrayList<Item>();
     private final LayoutInflater mInflater;
