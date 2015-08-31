@@ -19,6 +19,9 @@ public class HomeScreenActivity extends Activity {
         setContentView(R.layout.home_screen);
         GridView gridView = (GridView)findViewById(R.id.gridview);
         gridView.setAdapter(new HomeScreenAdapter(this));
+
+        //TODO: Get version.json and config.json
+        //TODO: When clicking on the "Report" image, it loads the HarassmentTypeActivity.
     }
 
     @Override
