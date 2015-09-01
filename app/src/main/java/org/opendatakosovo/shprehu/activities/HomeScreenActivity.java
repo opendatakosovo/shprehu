@@ -3,7 +3,6 @@ package org.opendatakosovo.shprehu.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
@@ -24,28 +23,31 @@ public class HomeScreenActivity extends Activity {
         setContentView(R.layout.home_screen);
         GridView gridView = (GridView)findViewById(R.id.gridview);
 
-        // Create the Custom Adapter Object
-        HomeScreenAdapter homScreenAdapter = new HomeScreenAdapter(this);
+
         // Set the Adapter to GridView
         gridView.setAdapter(new HomeScreenAdapter(this));
 
-        // Handling touch/click Event on GridView Item
+
 
         /**Interface definition for a callback to be invoked when an item in this AdapterView has been clicked.
          * please read more at http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html
+         */
 
-         This gridView OnItemClickListener it would be used to be clicked on gridView Items
-         this how it's right now it would open every items on the GridView but to specify every each button
-         we need to implement any of the Conditions things (like Switch, for etc)!
+        /** Handling touch/click Event on GridView Item
+         * for every each Item!
          */
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
+                switch (position) {
+                    case 0:
                 Intent typeReport = new Intent(getApplicationContext(), HarassmentTypeActivity.class);
                 startActivity(typeReport);
+                        break;
             }
-        });
+        }
+    });
 
 
 
