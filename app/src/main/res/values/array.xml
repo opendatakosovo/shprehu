@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Nationality List of Items-->
+    <string-array name="listNationality">
+        <item>Kosovar</item>
+        <item>Serbian</item>
+        <item>Albanian</item>
+        <item>Macedonian</item>
+        <item>Roma</item>
+        <item>Blah</item>
+        <item>Blah</item>
+        <item>Blah</item>
+    </string-array>
+    <string-array name="listNationalityValue">
+        <item>1 item is Kosovar</item>
+        <item>2 item is Serbian</item>
+        <item>3 item is Albanian</item>
+        <item>4 item is Macedonian</item>
+        <item>5 item is Roma</item>
+        <item>6 is Blah</item>
+        <item>7 is Blah</item>
+        <item>8 is Blah</item>
+    </string-array>
+
+    <!-- Ethnicity List of Items-->
+    <string-array name="listEthnicity">
+        <item>Kosovar</item>
+        <item>Serbian</item>
+        <item>Albanian</item>
+        <item>Macedonian</item>
+        <item>Roma</item>
+        <item>Blah</item>
+        <item>Blah</item>
+        <item>Blah</item>
+    </string-array>
+    <string-array name="listEthnicityValue">
+        <item>1 item is Kosovar</item>
+        <item>2 item is Serbian</item>
+        <item>3 item is Albanian</item>
+        <item>4 item is Macedonian</item>
+        <item>5 item is Roma</item>
+        <item>6 is Blah</item>
+        <item>7 is Blah</item>
+        <item>8 is Blah</item>
+    </string-array>
+
+    <!-- Gender List of Items-->
+    <string-array name="listOfGender">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="listOfGenderValue">
+        <item>1 item is a Male</item>
+        <item>2 item is a Female</item>
+        <item>3 item is a Other</item>
+    </string-array>
+
+
+    <!-- Country List of Items-->
+    <string-array name="listCountry">
+        <item>Kosovo</item>
+        <item>Serbia</item>
+        <item>Albania</item>
+        <item>Macedonia</item>
+        <item>Roma</item>
+        <item>Blah</item>
+        <item>Blah</item>
+        <item>Blah</item>
+    </string-array>
+    <string-array name="listCountryValue">
+        <item>1 item is Kosova</item>
+        <item>2 item is Serbia</item>
+        <item>3 item is Albania</item>
+        <item>4 item is Macedonia</item>
+        <item>5 item is Roma</item>
+        <item>6 is Blah</item>
+        <item>7 is Blah</item>
+        <item>8 is Blah</item>
+    </string-array>
+
+    <!-- Municipality List of Items-->
+    <string-array name="listMunicipality">
+        <item>Prishtine</item>
+        <item>Ferizaj</item>
+        <item>Peje</item>
+        <item>Gjakove</item>
+        <item>Mitrovica</item>
+        <item>Blah</item>
+        <item>Blah</item>
+        <item>Blah</item>
+    </string-array>
+    <string-array name="listMunicipalityValue">
+        <item>1 item is Prishtine</item>
+        <item>2 item is Ferizaj</item>
+        <item>3 item is Peje</item>
+        <item>4 item is Gjakove</item>
+        <item>5 item is Mitrovice</item>
+        <item>6 is Blah</item>
+        <item>7 is Blah</item>
+        <item>8 is Blah</item>
+    </string-array>
+
+</resources>

@@ -6,4 +6,15 @@
     <string name="title_activity_harassment_type">HarassmentTypeActivity</string>
     <string name="title_activity_harassment_location">HarassmentLocationActivity</string>
     <string name="title_activity_narrative">NarrativeActivity</string>
+    <string name="title_activity_settings">StringActivity</string>
+
+
+
+
+
+
+
 </resources>
+
+
+

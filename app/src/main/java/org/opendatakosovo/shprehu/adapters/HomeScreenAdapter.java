@@ -14,18 +14,18 @@ import java.util.List;
 import opendatakosovo.org.shprehu.R;
 
 public final class HomeScreenAdapter extends BaseAdapter {
-    private final List<Item> mItems = new ArrayList<Item>();
+    private final List<Item> mItems = new ArrayList<>();
     private final LayoutInflater mInflater;
 
     public HomeScreenAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
 
-        mItems.add(new Item("Report",       R.drawable.puppy1));
-        mItems.add(new Item("Light",   R.drawable.puppy1));
+        mItems.add(new Item("Report", R.drawable.puppy1));
+        mItems.add(new Item("Light", R.drawable.puppy1));
         mItems.add(new Item("Maps", R.drawable.puppy1));
-        mItems.add(new Item("Analytics",      R.drawable.puppy1));
-        mItems.add(new Item("Settings",     R.drawable.puppy1));
-        mItems.add(new Item("Contact",      R.drawable.puppy1));
+        mItems.add(new Item("Analytics", R.drawable.puppy1));
+        mItems.add(new Item("Settings", R.drawable.puppy1));
+        mItems.add(new Item("Contact", R.drawable.puppy1));
     }
 
     @Override

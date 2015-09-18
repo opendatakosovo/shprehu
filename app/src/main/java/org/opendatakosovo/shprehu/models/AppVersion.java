@@ -1,14 +1,19 @@
 package org.opendatakosovo.shprehu.models;
-import com.google.gson.annotations.Expose;
 
-/**
- * Created by pechorin on 9/1/15.
- */
+
+
+
+import android.util.Log;
+
+import java.io.IOException;
+import java.io.InputStream;
+
 public class AppVersion {
 
-    @Expose
+
+
     private Boolean forceUpdate;
-    @Expose
+
     private Versions versions;
 
     /**
@@ -36,6 +41,7 @@ public class AppVersion {
      */
     public Versions getVersions() {
         return versions;
+
     }
 
     /**
@@ -47,13 +53,28 @@ public class AppVersion {
         this.versions = versions;
     }
 
+    /**
+     *
+    @Override
+    public String toString(){
+
+        StringBuilder sb = new StringBuilder();
+        sb.append("forceUpdate:"+getForceUpdate());
+        sb.append("Versions:"+getVersions());
+
+        Log.d("WHATTTT", "" + sb.toString());
+        return sb.toString();
+
+
+    }**/
+
 }
 
-class Versions {
+class Versions extends InputStream {
 
-    @Expose
+
     private Double app;
-    @Expose
+
     private Double config;
 
     /**
@@ -83,4 +104,14 @@ class Versions {
     public void setConfig(Double config) {
         this.config = config;
     }
+
+    @Override
+    public int read() throws IOException {
+        return 0;
+    }
+
+
+
+
+
 }

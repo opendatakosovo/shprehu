@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "org.opendatakosovo.shprehu.activities.HomeScreenActivity"/>
+      <point      
+        x = "116"      
+        y = "164"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "org.opendatakosovo.shprehu.activities.users_info.Settings"/>
+      <point      
+        x = "920"      
+        y = "1892"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "org.opendatakosovo.shprehu.activities.harassment.HarassmentTypeActivity"/>
+      <point      
+        x = "1171"      
+        y = "164"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "org.opendatakosovo.shprehu.activities.harassment.HarassmentNarrativeActivity"/>
+      <point      
+        x = "3136"      
+        y = "116"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "org.opendatakosovo.shprehu.activities.harassment.HarassmentLocationActivity"/>
+      <point      
+        x = "2081"      
+        y = "111"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

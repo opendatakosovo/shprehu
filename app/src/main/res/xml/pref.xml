@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Settings of the Shprehu app"/>
+
+
+    <EditTextPreference
+        android:title="Date of birth"
+        android:key="dateOfBirth">
+    </EditTextPreference>
+
+    <ListPreference
+        android:title="Nationality"
+        android:key="nationality"
+        android:defaultValue="0"
+        android:entries="@array/listNationality"
+        android:entryValues="@array/listNationalityValue" />
+
+    <ListPreference
+        android:title="Ethnicity"
+        android:key="ethnicity"
+        android:defaultValue="0"
+        android:entries="@array/listEthnicity"
+        android:entryValues="@array/listEthnicityValue" />
+
+    <ListPreference
+        android:title="Gender"
+        android:key="gender"
+        android:defaultValue="0"
+        android:entries="@array/listOfGender"
+        android:entryValues="@array/listOfGenderValue" />
+
+    <ListPreference
+        android:title="Country"
+        android:key="country"
+        android:defaultValue="0"
+        android:entries="@array/listCountry"
+        android:entryValues="@array/listCountryValue" />
+
+    <ListPreference
+        android:title="Municipality"
+        android:key="municipality"
+        android:defaultValue="0"
+        android:entries="@array/listMunicipality"
+        android:entryValues="@array/listMunicipalityValue" />
+
+    <EditTextPreference
+        android:title="City"
+        android:key="city">
+    </EditTextPreference>
+
+</PreferenceScreen>

@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import org.opendatakosovo.shprehu.activities.harassment.HarassmentTypeActivity;
+import org.opendatakosovo.shprehu.activities.users_settings.SettingsActivity;
 import org.opendatakosovo.shprehu.adapters.HomeScreenAdapter;
 
 import opendatakosovo.org.shprehu.R;
@@ -41,9 +42,14 @@ public class HomeScreenActivity extends Activity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 switch (position) {
-                    case 0:
+                    case 0: // Report
                 Intent typeReport = new Intent(getApplicationContext(), HarassmentTypeActivity.class);
                 startActivity(typeReport);
+                        break;
+
+                    case 5: //Settings
+                Intent settingsScreen = new Intent(getApplication(), SettingsActivity.class);
+                startActivity(settingsScreen);
                         break;
             }
         }
