@@ -1,11 +1,23 @@
 package org.opendatakosovo.shprehu.activities.users_settings;
 
-import android.content.Context;
+import android.app.DatePickerDialog;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.preference.Preference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
+import android.support.annotation.LayoutRes;
+import android.support.annotation.Nullable;
+import android.support.v4.app.DialogFragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatDelegate;
+import android.support.v7.widget.Toolbar;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.DatePicker;
 
+
+import java.util.Calendar;
 
 import opendatakosovo.org.shprehu.R;
 
@@ -25,40 +37,25 @@ import opendatakosovo.org.shprehu.R;
 public class SettingsActivity extends PreferenceActivity {
 
 
-    /**
-     * {@inheritDoc}
-     */
     @Override
-    public boolean onIsMultiPane() {
-        return isXLargeTablet(this);
-    }
-
-    /**
-     * Helper method to determine if the device has an extra-large screen. For
-     * example, 10" tablets are extra-large.
-     */
-    private static boolean isXLargeTablet(Context context) {
-        return (context.getResources().getConfiguration().screenLayout
-                & Configuration.SCREENLAYOUT_SIZE_MASK) >= Configuration.SCREENLAYOUT_SIZE_XLARGE;
-    }
-
-    /*
-    *  is to create an internal fragment class, move the addPreferencesFromResources() into the fragment,
-    *  and invoke the fragment from the activity, like this:
-    *
-    * */
-    @Override
-    protected void onCreate(final Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(final Bundle savedInstanceState) {
         getFragmentManager().beginTransaction().replace(android.R.id.content, new SettingsPreferenceFragment()).commit();
+        getDelegate().installViewFactory();
+        getDelegate().onCreate(savedInstanceState);
+
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        super.onCreate(savedInstanceState);
     }
 
-    public static class SettingsPreferenceFragment extends PreferenceFragment
-    {
+
+
+
+    public static class SettingsPreferenceFragment extends PreferenceFragment  {
+
         @Override
-        public void onCreate(final Bundle savedInstanceState)
-        {
+        public void onCreate(final Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             addPreferencesFromResource(R.xml.pref);
         }
@@ -67,11 +64,70 @@ public class SettingsActivity extends PreferenceActivity {
 
 
 
+    private AppCompatDelegate mDelegate;
 
-    //create a private class to do the DatePicker dialog :)!
+    @Override
+    protected void onPostCreate(Bundle savedInstanceState) {
+        super.onPostCreate(savedInstanceState);
+        getDelegate().onPostCreate(savedInstanceState);
+    }
+    public ActionBar getSupportActionBar() {
+        return getDelegate().getSupportActionBar();
+    }
+    public void setSupportActionBar(@Nullable Toolbar toolbar) {
+        getDelegate().setSupportActionBar(toolbar);
+    }
 
-
-
+    @Override
+    public void setContentView(@LayoutRes int layoutResID) {
+        getDelegate().setContentView(layoutResID);
+    }
+    @Override
+    public void setContentView(View view) {
+        getDelegate().setContentView(view);
+    }
+    @Override
+    public void setContentView(View view, ViewGroup.LayoutParams params) {
+        getDelegate().setContentView(view, params);
+    }
+    @Override
+    public void addContentView(View view, ViewGroup.LayoutParams params) {
+        getDelegate().addContentView(view, params);
+    }
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        getDelegate().onPostResume();
+    }
+    @Override
+    protected void onTitleChanged(CharSequence title, int color) {
+        super.onTitleChanged(title, color);
+        getDelegate().setTitle(title);
+    }
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        getDelegate().onConfigurationChanged(newConfig);
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        getDelegate().onStop();
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        getDelegate().onDestroy();
+    }
+    public void invalidateOptionsMenu() {
+        getDelegate().invalidateOptionsMenu();
+    }
+    private AppCompatDelegate getDelegate() {
+        if (mDelegate == null) {
+            mDelegate = AppCompatDelegate.create(this, null);
+        }
+        return mDelegate;
+    }
 
 
 }

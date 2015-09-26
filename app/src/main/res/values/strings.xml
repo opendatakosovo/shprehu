@@ -1,18 +1,11 @@
 <resources>
     <string name="app_name">Shprehu</string>
-
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_harassment_type">HarassmentTypeActivity</string>
     <string name="title_activity_harassment_location">HarassmentLocationActivity</string>
     <string name="title_activity_narrative">NarrativeActivity</string>
-    <string name="title_activity_settings">StringActivity</string>
-
-
-
-
-
-
+    <string name="title_activity_settings">Settings of Shprehu</string>
 
 </resources>
 

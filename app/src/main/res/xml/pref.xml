@@ -3,11 +3,8 @@
     <PreferenceCategory
         android:title="Settings of the Shprehu app"/>
 
-
-    <EditTextPreference
-        android:title="Date of birth"
-        android:key="dateOfBirth">
-    </EditTextPreference>
+    <Preference
+       android:key="dateOfBirth" android:title="Date of birth"/>
 
     <ListPreference
         android:title="Nationality"
